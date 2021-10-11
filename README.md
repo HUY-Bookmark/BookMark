@@ -24,6 +24,6 @@ The contributors of this project are:
   Department of Computer Science
 - YoungHa Hwang, 2017029261, SE
   Department of Information Systems
-- Laura Vikke Mårtensson, XXX, SE
-  Department of Information Systems
+- Laura Vikke Mårtensson, 9077020219, SE
+  Department of Computer Science
 
