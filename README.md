@@ -13,6 +13,7 @@ The **BookMark** project comes from the observation that many people today don't
 In the AI part, we will mainly focus on the book management and suggestion. This includes some image recognition libraries to scan the barcode or the ISBN number and recover the book data from that information, or to scan the book cover and search for the book from those informations. Then we will be building some prediction algorithms, based on graphs, schemes and statistics from existing libraries and APIs, to determine the closest books to be recommended to a specific user. …
 
 **Contributors**
+hi
 
 The contributors of this project are:
 
