@@ -213,7 +213,7 @@ The sorting categories are two dropdowns that allows the user to select between 
 
 \subsubsection{Disconnect from bookshelf}\hfill\\
 At the bottom of the bookshelf information page, there's a button to disconnect from the physical bookshelf. If the user clicks it, it prompts him for confirmation in a pop up window. When the user disconnects from the bookshelf, the books on his account are preserved but the shelving and the sorting in the bookshelf are deleted.\\
-If the user is the only user connected to the bookshelf, the app asks him if he also wants to delete all the bookshelf recordings.\\
+If the user is the only user connected to the bookshelf, the app asks him if he also wants to delete all the bookshelf recordings. If he does, all the related data to this bookshelf in the database will be dumped.\\
 
 \subsubsection{Book lookup}\hfill\\
 When the user scans a book that is already in his collection or selects a book from the list on the app, the smart bookshelf lights up the correct shelf to highlight the correct position of the book depending on sorting. Or, the other way around, the user can select a book in the app and click on a button and it will light up the shelf on which the book should be stored.\\
@@ -225,15 +225,18 @@ If he wants an automated sorting, he selects the main sorting category (genre, a
 If he wants to sort them manually, he can move the books from shelf to shelf by clicking on a button or drag-and-dropping them from shelf list to shelf list.\\
 
 
-\subsection{User account}
-
-In the user’s account page, the user can check his personal information like his username, phone number or email. He can also change these informations. To change his email, the app requires the user to enter his password. If he changes his email, it will trigger the sending of a confirmation email to the new email; until then, the new email will not be used.\\
-For changing his password the users must put his current password and then the new password twice to confirm the newest one.\\
-At the top and in each corner of the page there are two buttons: one for the setting of the app and the other for the log out.\\
-
-\subsubsection{Settings}\hfill
+\subsection{Settings}\hfill
 
 In the settings page, the user can change the language of the app, or change the mode of his screen (dark or light mode) and set all the reading notifications. A switch will be available for the user if he wants to activate or deactivate reading notifications is activated by default.\\
+
+\subsubsection{User account}
+
+In the user’s account page, the user can check his personal information like his username, phone number or email. He can also change these informations.\\
+To change his email, the app requires the user to enter his password. If he changes his email, it will trigger the sending of a confirmation email to the new email; until then, the new email will not be used.\\
+For changing his password the users must put his current password and then the new password twice to confirm the newest one. As for the signup, the new password must be  at least 8 characters long, with one uppercase, one lowercase, one number and one symbol.\\
+
+\subsubsection{Account delete}\hfill\\
+At the bottom of the account page, there's a button for deleting the account. Clicking on that button toggles a confirmation popup to ensure the user really wants to delete his account. Then, the user has to click the link received in a confirmation email to terminate his account. His preferences, informations and data stored will be deleted from the database and the physical bookshelf will be unbound from the user's account.\\
 
 \subsubsection{Reading frequency}\hfill
 
@@ -247,17 +250,6 @@ Default setting for reading time is automatically set every day at 9am.\\
 \subsubsection{Log out}\hfill\\
 The logout button at the bottom of the user's settings list. To log out users just clicks on the button and a pop up appears to confirm the log out. The user is redirected back to the \textit{Log in} page.\\
 
-\subsubsection{Account delete}\hfill\\
-At the bottom of the account page, there's a button for deleting the account. Clicking on that button toggles a confirmation popup to ensure the user really wants to delete his account. Then, the user has to click the link received in a confirmation email to terminate his account. His preferences, informations and data stored will be deleted from the database and the physical bookshelf will be unbound from the user's account.\\
-
-\subsection{Shopping}
-For the shopping page there is a list in photo of all the books we have even if it’s not available.\\
-There is also a block where the user can see all the suggestion for him.\\
-All photos are clickable, then users can click on the book’s photo and check all the informations of the book, like rating, comments, price, availability, and where users can find it in the nearest bookstores (location management).\\
-
-
-\subsubsection{Basket}\hfill\\
-The user can add available books in his basket, update his basket (ex. quantity) or remove items from his basket. Then he can checkout and place his order.\\
 
 \subsection{Audiobook/Ebook binding}
 In his personal account, the user can bind his Amazon, Kindle, Audible or other reading accounts to sync his libraries.\\
@@ -268,14 +260,15 @@ For the ebook, it opens to the correct page in the reading app.\\
 
 \subsection{Backend management}
 
-\subsubsection{Add a bookshelf}
+\subsubsection{Add a bookshelf}\hfill\\
 
-\subsubsection{Remove user data}
+\subsubsection{Remove user data}\hfill\\
 
+\subsubsection{Clear bookshelf data}\hfill\\
 
 
 \begin{thebibliography}{00}
-\bibitem{RFID} 
+\bibitem{RFID}
 \url{https://gzandea.en.ecplaza.net/products/rfid-smart-bookshelveshf-intelligence-bookshelffile-management_3914989}
 
 \bibitem{Smartbookshelf}
