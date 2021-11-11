@@ -63,7 +63,7 @@ College of Engineering \\
 \begin{abstract}
 Nowadays, modern people (workers, students, etc.) lack time for reading books. Although they have motivation to read, the time for reading has low priority amongst the 24 hours of the day when people are investing time in various activities such as studying, working, or exercising. For example, even if you want to read a book, the hardships of choosing and purchasing a book yourself are an obstacle to reading. \\
 Therefore, we created the application BookMark to overcome these difficulties. BookMark is meant to help the customers manage their bookshelf, either physical or digital, and arrange more time in their daily life to read. It provides a system of notifications and reminders to keep track of the books the user is currently reading. It makes the bookshelf management easier by using simple image recognition to search for a book by its cover or barcode or ISBN number, automatically sorting the content and providing different pairing options between physical copies, ebooks or audiobooks. By automatizing the usually difficult part of book management, BookMark wishes to let the reader make more space in his or her day to actually read.
-\end{abstract} 
+\end{abstract}
 
 
 \subsection*{Role Assignments}
@@ -105,12 +105,22 @@ This app is meant to help with all of these issues. If the users can keep track 
 Furthermore, if they have already purchased the physical copy, they can simply scan the barcode or the ISBN number, or maybe even just the cover, and the app will show them if the book is also available as an audiobook or an ebook, so that they can read or listen as they prefer. The app will also propose time slots to read when a person has a break in their calendar and propose new books they may like to read next, so that they don’t have to search for books that they might like. The application will get to know the user, and therefore know their likes and dislikes. If they purchase an ebook or an audiobook copy, they can directly start listening to the audiobook or reading the e-book on their phone. This application is available through a simple sign up phase and afterwards the subscriber has their own personal login. A chat feature will also be available as a help to the user if needed. The ambition of BookMark is to assist people with their busy schedule and to give them the space to read more books at their desired pace.
 
 \subsection*{Problem Statement (client's needs)}
-Through a questionnaire, we found out, as suspected, that students feel that they do not have the time to read books in their everyday life. We asked different people questions about their normal life, and the biggest feedback from an age group was people between 15-26 (94\%). We asked what they need more of in their life, and the number one answer was: time. Other top answers were money and love. The reasons for reading amongst the tested people were to learn, for entertainment or relaxation. To the question: “What would make you read more books?” The answer “more time” was the most frequent one, but here are some other answers worth mentioning: “more awareness of the books out there (too many to know them all)”, “if finding interesting books didn’t require so much research”, “Easier way to get physical books” or “A better variety of English ones in store”. The testees usually read 30 minutes before bed, in the summer vacation (when there is no school or work) or during commute on their phones or with a physical book. Some of them have experience with using audiobooks, but most of them don't. The ones that do listen to audiobooks, do it so they can do other things at the same time.
+Through a questionnaire, we found out, as suspected, that students feel that they do not have the time to read books in their everyday life. We asked different people questions about their normal life, and the biggest feedback from an age group was people between 15-26 (94\%). We asked what they need more of in their life, and the number one answer was: time. Other top answers were money and love.\\
+The reasons for reading amongst the tested people were to learn, for entertainment or relaxation. To the question: “What would make you read more books?” The answer “more time” was the most frequent one, but here are some other answers worth mentioning: “more awareness of the books out there (too many to know them all)”, “if finding interesting books didn’t require so much research”, “Easier way to get physical books” or “A better variety of English ones in store”.\\
+The testees usually read 30 minutes before bed, in the summer vacation (when there is no school or work) or during commute on their phones or with a physical book. Some of them have experience with using audiobooks, but most of them don't. The ones that do listen to audiobooks, do it so they can do other things at the same time.\\
 The survey is only a sample test and we acknowledge that this questionnaire is only a snapshot of reality. We only use the stats as inspiration for our different features in our application.
 
 
 \subsection*{Research on any related software}
-There are quite a few concepts already on the market, or in the works, that resemble online bookshelves or ways to track your reading progress. These range from large physical bookshelves aimed at libraries as the target consumer, down to mobile applications which help you to keep track of the books that you are reading or want to read.\\
+There are quite a few concepts already on the market, or in the works, that resemble online bookshelves or ways to track your reading progress. These range from large physical bookshelves aimed at libraries as the target consumer, down to mobile applications which help you to keep track of the books that you are reading or want to read.
+\begin{itemize}
+	\item RFID smart bookshelf
+	\item Smart AI Modular Bookshelf
+	\item Goodreads
+	\item BookBrowse
+	\item StoryGraph
+\end{itemize}
+
 
 \subsection{RFID smart bookshelves} 
 This company produces large smart bookshelves that are designed to be used in a library and make work for the employees easier. The bookshelves communicate with a central file management system and works by scanning books in real-time through an antenna array. The system has useful functions such as; easy navigation to books when looked up in the system, generating reports when books are placed on the wrong shelf by a reader or an employee and detecting missing books. These bookshelves and their associated functions are very useful and mostly designed for the needs of huge libraries and professionals who are handling a lot of books. In contrast, our project focuses more on the needs of the private consumer, and is designed to help the individual reader with managing their private book collection.\cite{RFID} \\
@@ -130,72 +140,105 @@ This application offers you personalised book recommendations, as well as tools 
 \section{Requirement Analysis}
 
 \subsection{Log-in}
-When the users download the app, the main page shows two inputs for the email and password to sign in if the users already have an account. Otherwise, they can create an account with the “Create” button below the login form on the main page, which will redirect them to the sign up page. Finally, a smaller link can lead them to the recovery page in case they forgot their password. For the login, the software will look into the database to find the matching combination of username and password or email and password for a user. After logging in, the users are redirected to the user's main page.\\
+When the users download the app, the main page shows two inputs for the email and password to sign in if the users already have an account. Otherwise, they can create an account with the \textit{Create} button below the login form on the main page, which will redirect them to the sign up page. Finally, a smaller link can lead them to the account recovery page in case they forgot their password.\\
+For the login process, the software looks into the database to find the matching combination of username and password or email and password for a user. After logging in, the user is redirected to his main page, \textit{My BookMark}.\\
 
 \subsection{Sign up}
-Membership requires basic information such as a unique username, an email, a password, and an optional phone number for password recovery. The app will then require the user to agree with the terms and conditions, and optionally to subscribe to the newsletter. The terms and conditions are displayed in a scrollable pop-up that allows the users to read them without losing the data they've already input in the form.\\
-After the registration, a confirmation email will be sent to the user to verify the email. Once the email has been verified, the user can log into the app. For the first connection users must choose at least 3 genres of books they like for suggestion in the first time correct genre book.\\
+Membership requires basic information such as a unique username, a valid email, a password, and an optional phone number for password recovery. The password has to be at least 8 characters long, with one uppercase, one lowercase, one number and one symbol.\\
+The app also requires the user to agree with the terms and conditions, and optionally to subscribe to the newsletter. The terms and conditions are displayed in a scrollable pop-up that allows the users to read them without losing the data they've already input in the form.\\
+The signup process then creates a 8-digit token and sends it to the user in a confirmation email, in clear and in a hyperlink. The hyperlink leads to a confirmation page that will display the success of the confirmation.\\
+Once the email has been verified, the user can log into the app. For the first connection, the user must choose at least 3 genres of books they like for suggestion in the first time correct genre book.\\
 
 
 \subsection{My BookMark}
-The home page of the app functions as a 'hub' from where you can access all the different features of the application. On the top of the page you will see basic user information, such as username and stats about your book collection and reading status.\\
-The main page of the app consists of a preview of the user's shelves and categories. By clicking on each element, the user opens a more detailed page of the shelf or category, listing all the books that it's referencing and his current progress in those books. When he clicks on one of them, he can trigger the book view. At the top of the page, there's a + button to add a book.\\
-At the top corners of the page there are two buttons, where one is for accessing the settings of the app, and the other one is for log out. In the bottom menu, each feature of the app will be represented as a square with a symbol and the name of the feature for easy navigation. Pressing the squares will provide quick-access to each page where you can do further actions. \\
-
-\subsubsection{Add a book}\hfill\\
-The user clicks a + button in the menu to add a new book. This action displays a pop-up to ask him if he wants to enter the book manually or use the camera to scan the book's cover, the ISBN number or the barcode.\\
-If he selects the scan option, the app opens the camera and the user scans the book. If it's the cover, the image is decomposed using an image recognition library to figure out the book title and pair it with a book in the user's collection or a book in the internet databases. If it's a barcode or an ISBN number, the app searches in external APIs to find the book reference through the given number. Once the app has found a matching book by image recognition or by an external request, it asks the user to confirm that it's the correct book and if he wants to add this book to his library. If yes, the book is added to the library and assigned to a shelf on the bookshelf. The shelf lights up to show the placing of the book.\\
-If the user has selected the manual entry of the book, he is prompted to enter the book title and author. The book is then searched on the Internet and the ISBN and book title are displayed to the user to ask him if it's the correct book and if he wants to add it. Then we repeat the same process as for the scan option to assign the shelf to the book.\\
-
-\subsubsection{Book view and update}\hfill\\
-The book view displays the book data: Title, author, eventual number of pages, shelf position, current labels, reading status and notes. If he clicks on a little bookshelf icon atop of the page of a book of which he owns a physical copy, the physical bookshelf will light up the shelf on which the book should be stored, depending on the current sorting parameters.\\
-The user can update the following things on the book:\\
+The home page of the app functions as a 'hub' from where you can access all the different features of the application. The bottom menu is composed of five buttons, each represented as a symbol:
 \begin{itemize}
-\item The label assigned to the book (read, not read, currently reading)
-\item His reading status (current page or chapter number)
-\item His personal annotations, whether they're global or whether they are related to a specific page or chapter
-\item His personal rating, with zero to five stars
-\item Specific reminders to read this book if he's currently reading it
+	\item Home: brings the user back to the home page
+	\item Library: takes the user to the list of books (\textit{My Bookshelf} page)
+	\item Add: goes to \textit{Add a book} page
+	\item Statistics: brings the user to his \textit{Statistics} page
+	\item Account: goes to the \textit{User account} management and settings page
 \end{itemize}
 
+The home page in itself consists of a preview of the user's shelves and categories. By clicking on each element, the user opens a more detailed page of the shelf or category, listing all the books that it's referencing and his current progress in those books. When he clicks on one of them, he triggers the \textit{Book view}.\\
 
-\hfill
+\subsubsection{Add a book}\hfill\\
+
+The user clicks the central + button in the bottom menu to add a new book. This action displays a pop-up to ask him if he wants to enter the book manually or use the camera to scan the book's cover, the ISBN number or the barcode.\\
+If he selects the scan option, the app opens the camera and the user scans the book. If it's the cover, the image is decomposed using an image recognition library to figure out the book title and pair it with a book in the user's collection or a book in the internet databases. If it's a barcode or an ISBN number, the app searches in external APIs to find the book reference through the given number. Once the app has found a matching book by image recognition or by an external request, it asks the user to confirm that it's the correct book and if he wants to add this book to his library. If yes, the book is added to the library and assigned to a shelf on the bookshelf. The shelf lights up to show the placing of the book.\\
+If the user has selected the manual entry of the book, he is prompted to enter the book title and author. The book is then searched on the Internet and the ISBN and book title are displayed to the user to ask him if it's the correct book and if he wants to add it. Then we repeat the same process as for the scan option to assign the book to a shelf.\\
+
+\subsubsection{My Bookshelf}\hfill\\
+
+This page displays a list of the books and ebooks owned by the user sorted depending, listing them in different categories:
+\begin{itemize}
+	\item New Arrivals: shows the two most recently added books.
+	\item Currently reading…: shows the books the user is currently reading, sorted by latest reading update.
+	\item Wishlist: shows the books the user has added to his wishlist from the recommendations.
+	\item Recommended: recommended books depending on what the user has already read. Clicking on this list redirects to the \textit{Suggested books} page.
+	\item All books: displays a list of all the books depending on the user's sorting parameters (author, title, genre). The sorting type can be selected in the \textit{User account} settings.
+\end{itemize}
+Each category at first only displays 4 books, but it can be expanded to display the complete list.\\
+The page also has a search bar to find a book easily. When the user starts inputing text in the search bar, the app searches for the book depending on the title or author's name in the user's bookshelf, hiding the rest of the categories. If the book isn't in the user's bookshelf, the search shows 'No results' and proposes to search for the book on the Internet and in the book database.\\
+By clicking on a book, the user toggles the \textit{Book view} for this specific book.\\
 
 
-\subsubsection{Removing book}\hfill\\
+\subsubsection{Book view}\hfill\\
 
-If the user wants to remove a book from his app library and from his bookshelf, he can click on a button at the bottom of the book view. A popup window will appear to ask him if he's certain to want to remove this book from the bookshelf and from the library. The book will then be removed from the user's collection and from the positioning in the physical bookshelf.\\
+The book view displays the book data: title, author, eventual number of pages, shelf position, current labels, reading status and notes. If he clicks on a little bookshelf icon atop of the page of a book of which he owns a physical copy, the physical bookshelf will light up the shelf on which the book should be stored, depending on the current sorting parameters.\\
+The user can update the following things on the book:\\
+\begin{itemize}
+	\item The label assigned to the book (read, not read, currently reading);
+	\item His reading status (current page or chapter number);
+	\item His personal annotations, whether they're global or whether they are related to a specific page or chapter;
+	\item His personal rating, with zero to five stars;
+	\item Specific reminders to read this book if he's currently reading it.
+\end{itemize}
+
+If the user wants to remove the book from his app library and from his bookshelf, he can click on a button at the bottom of the Book view. A popup window will appear to ask him if he's certain to want to remove this book from the bookshelf and from the library. The book will then be removed from the user's collection and from the positioning in the physical bookshelf.\\
 
 \subsubsection{Suggested books}\hfill\\
 
 A separate page displays the recommended books for the user depending on the books he already owns. For this, we will design a personal machine learning algorithm inspired by popular suggestion algorithms like Netflix's, YouTube's, Instagram's or Amazon's.\\
+The page consists of a list of books and covers. If the user clicks on a book, it will toggle a simplified book view with the title, author, number of pages, and a + button to add the book to his bookshelf.\\
 
 
 \subsection{Physical Bookshelf}
 
-The physical bookshelf comes in various sizes and colors, but in a common simple design that appeals to many different types of people. The bookshelf will need to be plugged into a power source in order to function and be able to connect with the associated app. On each shelf there is a LED band that can light up when triggered by the app. \\
+The physical bookshelf comes in various sizes and colors, but in a common simple design that appeals to many different types of people. The bookshelf will need to be plugged into a power source in order to function and be able to connect with the associated app. On each shelf there is a LED band that can light up when triggered by the app.\\
 
 \subsubsection{Connect to bookshelf}\hfill\\
-Once the user is connected, the app will request to use bluetooth to search for nearby devices. If the physical bookshelf is activated/turned on, it will appear and the client can connect to it.\\
+In the user settings, there's an option titled 'Bookshelf' to configure the user's physical bookshelf.\\
+If the user is not yet connected to the bookshelf, when he selects this option, a large pop-up appears. If the Bluetooth is off, it asks the user to turn off the Bluetooth. When the Bluetooth is on, it starts searching for devices ready for connection, and displays only the nearby BookMark bookshelves. If the user clicks on one of them, it prompts him for a connection confirmation. Multiple users can be connected to the same bookshelf.\\
+Once the user's account is bound to the physical bookshelf, when the user clicks on the Bookshelf option in the settings, the page displays the informations of the bookshelf. These include the id number, the dimensions, the number of shelves, the number of books in the bookshelf, the number of audiobooks and ebooks and the sorting and sub-sorting categories.\\
+The sorting categories are two dropdowns that allows the user to select between sorting by title, author, genre or none. If the user changes the sorting category, a pop up is displayed to confirm the change and recompute all the sorting in the bookshelves. page will display a graphical preview of the bookshelf and all the books in the right order.\\
+
+\subsubsection{Disconnect from bookshelf}\hfill\\
+At the bottom of the bookshelf information page, there's a button to disconnect from the physical bookshelf. If the user clicks it, it prompts him for confirmation in a pop up window. When the user disconnects from the bookshelf, the books on his account are preserved but the shelving and the sorting in the bookshelf are deleted.\\
+If the user is the only user connected to the bookshelf, the app asks him if he also wants to delete all the bookshelf recordings. If he does, all the related data to this bookshelf in the database will be dumped.\\
 
 \subsubsection{Book lookup}\hfill\\
 When the user scans a book that is already in his collection or selects a book from the list on the app, the smart bookshelf lights up the correct shelf to highlight the correct position of the book depending on sorting. Or, the other way around, the user can select a book in the app and click on a button and it will light up the shelf on which the book should be stored.\\
 
 \subsubsection{Bookshelf sorting}\hfill\\
-In the app, the user can toggle a menu displaying the current sorting of the shelves. If none is selected, the books are just stored by date added. If a sorting (by genre, author, title, etc.) is selected, then the page will display a graphical preview of the bookshelf and all the books in the right order. Underneath, a list shelf by shelf will show the correct order of the books.\\
-By clicking on a shelf or in the sorting menu, the user can rearrange the bookshelf sorting manually or select a new sorting category.\\
+In his settings, the user can view the current sorting of the shelves in two dropdowns: sorting and sub-sorting. If none is selected, the books are just stored by date added. If a sorting (by genre, author, title, etc.) is selected, then in the All Books category of \textit{MyBookmark}, the book previews will be rearranged depending the sorting category.\\
+By clicking on a shelf or in the sorting menu in \textit{MyBookmark}, the user can rearrange the bookshelf sorting manually or select a new sorting category. \\
 If he wants an automated sorting, he selects the main sorting category (genre, author, title, etc.) and the app will compute the best rearrangement of the books depending on the books available in physical copies, the main sorting category and eventually another sub-sorting option (sort by author then book title for example).\\
 If he wants to sort them manually, he can move the books from shelf to shelf by clicking on a button or drag-and-dropping them from shelf list to shelf list.\\
 
-\subsection{User account}
 
-In the user’s account page, the user can check his personal information like his username, phone number or email. He can also change these informations. To change his email, the app requires the user to enter his password. If he changes his email, it will trigger the sending of a confirmation email to the new email; until then, the new email will not be used.\\
-For changing his password the users must put his current password and then the new password twice to confirm the newest one.\\
-At the top and in each corner of the page there are two buttons: one for the setting of the app and the other for the log out.\\
-
-\subsubsection{Settings}\hfill
+\subsection{Settings}\hfill
 
 In the settings page, the user can change the language of the app, or change the mode of his screen (dark or light mode) and set all the reading notifications. A switch will be available for the user if he wants to activate or deactivate reading notifications is activated by default.\\
+
+\subsubsection{User account}
+
+In the user’s account page, the user can check his personal information like his username, phone number or email. He can also change these informations.\\
+To change his email, the app requires the user to enter his password. If he changes his email, it will trigger the sending of a confirmation email to the new email; until then, the new email will not be used.\\
+For changing his password the users must put his current password and then the new password twice to confirm the newest one. As for the signup, the new password must be  at least 8 characters long, with one uppercase, one lowercase, one number and one symbol.\\
+
+\subsubsection{Account delete}\hfill\\
+At the bottom of the account page, there's a button for deleting the account. Clicking on that button toggles a confirmation popup to ensure the user really wants to delete his account. Then, the user has to click the link received in a confirmation email to terminate his account. His preferences, informations and data stored will be deleted from the database and the physical bookshelf will be unbound from the user's account.\\
 
 \subsubsection{Reading frequency}\hfill
 
@@ -207,19 +250,8 @@ According to his choice a pop up will appear to help users to select time or dat
 Default setting for reading time is automatically set every day at 9am.\\
 
 \subsubsection{Log out}\hfill\\
-For log out users should just click on the button and a pop up will appear to confirm the log out.\\
+The logout button at the bottom of the user's settings list. To log out users just clicks on the button and a pop up appears to confirm the log out. The user is redirected back to the \textit{Log in} page.\\
 
-\subsubsection{Account delete}\hfill\\
-At the bottom of the account page, there's a button for deleting the account. Clicking on that button toggles a confirmation popup to ensure the user really wants to delete his account. Then, the user has to click the link received in a confirmation email to terminate his account. His preferences, informations and data stored will be deleted from the database and the physical bookshelf will be unbound from the user's account.\\
-
-\subsection{Shopping}
-For the shopping page there is a list in photo of all the books we have even if it’s not available.\\
-There is also a block where the user can see all the suggestion for him.\\
-All photos are clickable, then users can click on the book’s photo and check all the informations of the book, like rating, comments, price, availability, and where users can find it in the nearest bookstores (location management).\\
-
-
-\subsubsection{Basket}\hfill\\
-The user can add available books in his basket, update his basket (ex. quantity) or remove items from his basket. Then he can checkout and place his order.\\
 
 \subsection{Audiobook/Ebook binding}
 In his personal account, the user can bind his Amazon, Kindle, Audible or other reading accounts to sync his libraries.\\
@@ -228,9 +260,17 @@ For an audiobook, it plays the audiobook from the saved timestamp\\
 For the ebook, it opens to the correct page in the reading app.\\
 
 
+\subsection{Backend management}
+
+\subsubsection{Add a bookshelf}\hfill\\
+
+\subsubsection{Remove user data}\hfill\\
+
+\subsubsection{Clear bookshelf data}\hfill\\
+
 
 \begin{thebibliography}{00}
-\bibitem{RFID} 
+\bibitem{RFID}
 \url{https://gzandea.en.ecplaza.net/products/rfid-smart-bookshelveshf-intelligence-bookshelffile-management_3914989}
 
 \bibitem{Smartbookshelf}
