@@ -1,0 +1,6 @@
+[submodule "Sources/BookMarkAPI"]
+	path = Sources/BookMarkAPI
+	url = https://github.com/SarahSch19/BookMarkAPI
+[submodule "Sources/BookMarkSwiftApp"]
+	path = Sources/BookMarkSwiftApp
+	url = https://github.com/SarahSch19/BookMarkSwiftApp
