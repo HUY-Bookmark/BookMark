@@ -41,10 +41,10 @@ College of Engineering \\
 \begin{document}
 
 
-\title{BookMark - Smart Bookshelf}
+\title{BookMark - Bright Bookshelf}
 
 \author{
-\authorBlock{Mathilde Lærke Hansen}{9077620215}{Information Systems}{Copenhagen}{Denmark}{malaha@ruc.dk}
+\authorBlock{Mathilde Laerke Hansen}{9077620215}{Information Systems}{Copenhagen}{Denmark}{malaha@ruc.dk}
 \and
 \authorBlock{Sarah Schlegel}{9091820217}{Computer Science}{Paris}{France}{sschlegel@protonmail.ch}
 \and
@@ -52,7 +52,7 @@ College of Engineering \\
   \linebreakand 
 \authorBlock{Young Ha}{2017029261}{Information Systems}{Seoul}{South Korea}{dudgk970@gmail.com} 
 \and
-\authorBlock{Laura Vikke Mårtensson}{9077020219}{Computer Science}{Copenhagen}{Denmark}{lauramaartensson@gmail.com}
+\authorBlock{Laura Vikke Martensson}{9077020219}{Computer Science}{Copenhagen}{Denmark}{lauramaartensson@gmail.com}
 }
 
 
@@ -61,8 +61,8 @@ College of Engineering \\
 \maketitle
 
 \begin{abstract}
-Nowadays, modern people (workers, students, etc.) lack time for reading books. Although they have motivation to read, the time for reading has low priority amongst the 24 hours of the day when people are investing time in various activities such as studying, working, or exercising. For example, even if you want to read a book, the hardships of choosing and purchasing a book yourself are an obstacle to reading. \\
-Therefore, we created the application BookMark to overcome these difficulties. BookMark is meant to help the customers manage their bookshelf, either physical or digital, and arrange more time in their daily life to read. It provides a system of notifications and reminders to keep track of the books the user is currently reading. It makes the bookshelf management easier by using simple image recognition to search for a book by its cover or barcode or ISBN number, automatically sorting the content and providing different pairing options between physical copies, ebooks or audiobooks. By automatizing the usually difficult part of book management, BookMark wishes to let the reader make more space in his or her day to actually read.
+Nowadays, modern people (employees, students, etc.) lack time for reading books. Although they have the motivation to read, when people are investing time in various activities such as studying, working, or exercising, the time for reading has low priority amongst the 24 hours of a day. For example, even if you want to read a book, the hardships of choosing and purchasing a book yourself are an obstacle to reading. \\
+To meet the aspiration of overcoming these obstacles, we created the application BookMark. BookMark is meant to help the customers manage their bookshelf, either physical or digital, and arrange more time in their daily life to read. BookMark provides a system of reminders to keep track of the books the user is currently reading, and makes the bookshelf management easier by using simple image recognition to search for a book by its cover, barcode, or ISBN number. It automatically sorts the content and providing different pairing options between physical copies, ebooks or audiobooks. By automatizing the usually difficult part of book management, BookMark wishes to let the reader make more space in his or her day to actually read.
 \end{abstract}
 
 
@@ -73,7 +73,7 @@ Therefore, we created the application BookMark to overcome these difficulties. B
  \hline
  Roles & Names & Task description etc. \\ 
  \hline
- User / Customer  & Young Ha Hwang & Ordinary modern people are consumers of the main application. We assumed that they were willing to read, but that reading priorities were set low due to other activities. To check the sustainability of the application, first, a simple survey was conducted to determine users' preferences for reading, if they are currently reading a book and how much time they spend reading a book. \\ 
+ User / Customer  & Young Ha Hwang & Ordinary people fitting in to modern society are main users of the application. We assume that they are willing to read, but that reading priorities are set low due to other activities. To check the sustainability of the application, first, a simple survey was conducted to determine users' time management for reading, if they are currently reading a book and how reading is prioritised in their everyday life. \\ 
  \hline
 \end{tabular}
 \end{center}
@@ -82,11 +82,11 @@ Therefore, we created the application BookMark to overcome these difficulties. B
 \begin{tabular}{ | m{1.8cm} | m{1.5cm}| m{4.2cm} | } 
 
  \hline
- Project manager & Sarah Schlegel & The project manager is in charge of planning, assigning the tasks and is generally in charge of ensuring that the project is moving forward. She will make sure that the team meets the different goals at the right time. She has the responsibility to inform the development manager of any development around the project requirements. \\
+ Project manager & Sarah Schlegel & The project manager is in charge of planning, assigning the tasks and is generally in charge of ensuring that the project is moving forward. She will make sure that the team meets the different goals at the right time. She has the responsibility to inform the development manager of any changes regarding the project requirements. \\
   \hline
-  Development manager &  Mathilde Lærke Hansen & The development manager takes the user into consideration and confirms the final functions of the software. If the software does not live up to users needs and expectations, she will gather information about the user and customers and then advise the software developers  how to fulfill the needs of the user. The development manager mediates and updates the software developers.\\
+  Development manager &  Mathilde Lærke Hansen & The development manager confirms the final functions of the software with considerations of the user as the main consumer of the application. The development manager mediates and updates the software developers. If the software does not live up to the users needs and expectations, the development manager will gather more information about the customers and then advise the software developers how to fulfill the needs of the user.\\
   \hline
- Software developer & Anais Zhang \&  Laura Vikke Mårtensson & The software developers reflect on which software system that would fit the best for the application. They analyze, categorize and examine the software. They make decisions of which development tools that can be used to implement the applications. \\ 
+ Software developer & Anais Zhang \&  Laura Vikke Mårtensson & The software developers reflect on which software system that would fit the best for the application. They analyze, categorize and examine the software and make decisions of which development tools that can be used to implement the applications. They collaborate with the development manager \\ 
  \hline
 \end{tabular}
 \end{center}
@@ -96,23 +96,23 @@ Therefore, we created the application BookMark to overcome these difficulties. B
 \section{Introduction}
 
 \subsection*{Motivation}
-The idea for the BookMark project derives from the observation that many people today don't have the time, or the motivation, to read new books as they navigate their fast paced and overstimulated everyday life. Our goal is to provide, with this combination of a smart bookshelf and mobile BookMark application, a simpler way to manage the books people are reading, whether it's by swapping from the physical book to the audiobook, by reminding them to read at certain times or by recommending them new books based on their current preferences. \\ \\
+The idea for the BookMark project derives from an observation that many people today don't have the time nor the motivation to read new books as they navigate their fast paced and overstimulated everyday life. Our goal is to provide, with this combination of a bright bookshelf and mobile BookMark application, a simpler way to manage the books people are reading, whether it's by swapping from a physical book to an audio book, by reminding the user to read at certain times or by recommending them new books based on their current preferences. \\ \\
 
 
-This application focuses on making reading more efficient for people and helping them sort and keep track of their books on a physical bookshelf. There is no time in the schedule of most people to read books that are not academic or work related. Also, for people who actually manage to find the time to read, they usually keep on the one hand a physical bookshelf, and on the other hand a list of audiobooks and ebooks. But sometimes, they might forget their physical copy at home, or maybe want to do something else while listening to their book. Or maybe they have the ebook and the physical copy, and they'd like to switch from one to the other easily without struggling to find the correct page between the different versions.\\
-This app is meant to help with all of these issues. If the users can keep track of their reading, and get reminders of their current position in a book, they can be more eager to pick up their book again. BookMark can also help them to put the book back to the correct place in a physical bookshelf and not mess up the sorting. When they're done reading and have to get going, they just have to note their position in the app, whether it's the chapter or the page they left it, and they won't lose track of their progress in the book.\\ \\
+This application focuses on making reading more efficient for people and helping them sort and keep track of their books on a physical bookshelf. There is no time in the schedule of most people to read books that are not academic or work related. Also, people who actually manage to find the time to read usually keep a physical bookshelf. On the other hand they could keep a list of audiobooks and ebooks on their devices, and have their bookshelf right in their pockets or keep both physical and mobile. For peoples who have a lot on their plates, sometimes they might forget their physical copy at home, or maybe want to do a task while listening to their book. Maybe it would help them to have the ebook and the physical copy, and they'd like to switch from one to the other easily without struggling to find the correct page between the different versions.\\
+BookMark is meant to help with these issues mentioned above. If the users can keep track of their reading, and get reminders of their current position in a book, they can be more eager to pick up their book again. BookMark will help the user put the book back to the correct place in a physical bookshelf and not organize a personalized sorting system. When they're done reading and have to get going, they just have to note their current position in the book in the app, whether it's the chapter or the page they left it, and they won't lose track of their progress in the book. \\ \\
 
-Furthermore, if they have already purchased the physical copy, they can simply scan the barcode or the ISBN number, or maybe even just the cover, and the app will show them if the book is also available as an audiobook or an ebook, so that they can read or listen as they prefer. The app will also propose time slots to read when a person has a break in their calendar and propose new books they may like to read next, so that they don’t have to search for books that they might like. The application will get to know the user, and therefore know their likes and dislikes. If they purchase an ebook or an audiobook copy, they can directly start listening to the audiobook or reading the e-book on their phone. This application is available through a simple sign up phase and afterwards the subscriber has their own personal login. A chat feature will also be available as a help to the user if needed. The ambition of BookMark is to assist people with their busy schedule and to give them the space to read more books at their desired pace.
+Furthermore, if they have already purchased the physical copy, they can simply scan the barcode, the ISBN number, or even just the cover, and the app will give the user alternative options like if the book is available as an audiobook or an ebook, so that they can read or listen as they prefer. The app will also propose time slots to read when a person has a break in their calendar and propose new books they may like to read next, so that they don’t have to search for books that they might like. The application will get to know the user, and therefore know their likes and dislikes. If they purchase an ebook or an audiobook copy, they can directly start listening to the audiobook or reading the e-book on their phone. This application is available through a simple sign up phase and afterwards the subscriber has their own personal login. A chat feature will also be available as a help to the user if needed. The ambition of BookMark is to assist people with their busy schedule and provide space to read more books at their desired pace.
 
 \subsection*{Problem Statement (client's needs)}
-Through a questionnaire, we found out, as suspected, that students feel that they do not have the time to read books in their everyday life. We asked different people questions about their normal life, and the biggest feedback from an age group was people between 15-26 (94\%). We asked what they need more of in their life, and the number one answer was: time. Other top answers were money and love.\\
-The reasons for reading amongst the tested people were to learn, for entertainment or relaxation. To the question: “What would make you read more books?” The answer “more time” was the most frequent one, but here are some other answers worth mentioning: “more awareness of the books out there (too many to know them all)”, “if finding interesting books didn’t require so much research”, “Easier way to get physical books” or “A better variety of English ones in store”.\\
-The testees usually read 30 minutes before bed, in the summer vacation (when there is no school or work) or during commute on their phones or with a physical book. Some of them have experience with using audiobooks, but most of them don't. The ones that do listen to audiobooks, do it so they can do other things at the same time.\\
-The survey is only a sample test and we acknowledge that this questionnaire is only a snapshot of reality. We only use the stats as inspiration for our different features in our application.
+Through a questionnaire, we found out, as suspected, that students feel that they do not have the time to read books in their everyday life. We asked different people questions about their normal life. The biggest feedback from an age group was people between 15-26 (94\%). We asked what they need more of in their life, and the number one answer was: time. Other top answers were money and love.\\
+The reasons for reading amongst the questioned people were to learn, for entertainment, or for relaxation. To the question: “What would make you read more books?” The answer “more time” was the most frequent one, but here are some other answers worth mentioning: “more awareness of the books out there (too many to know them all)”, “if finding interesting books didn’t require so much research”, “Easier way to get physical books” or “A better variety of English ones in store”.\\
+The testet people usually either read 30 minutes before bed, in the summer vacation (when there is no school or work) or during commute on their phones or with a physical book. Some of them have experience with using audiobooks, but most of them don't. The ones that do listen to audiobooks, do it so that they can do other things at the same time.\\
+The survey is only a sample test and we acknowledge that this questionnaire is only a snapshot of reality. We only use the stats as an inspiration for our different features in our application.
 
 
 \subsection*{Research on any related software}
-There are quite a few concepts already on the market, or in the works, that resemble online bookshelves or ways to track your reading progress. These range from large physical bookshelves aimed at libraries as the target consumer, down to mobile applications which help you to keep track of the books that you are reading or want to read.
+There are quite a few concepts already on the market, or in progress of development, that resemble online bookshelves or ways to track your reading progress. These range from large physical bookshelves aimed at libraries as the targeted consumer, down to mobile applications which help you to keep track of the books that you are reading or want to read.
 \begin{itemize}
 	\item RFID smart bookshelf
 	\item Smart AI Modular Bookshelf
@@ -140,14 +140,14 @@ This application offers you personalised book recommendations, as well as tools 
 \section{Requirement Analysis}
 
 \subsection{Log-in}
-When the users download the app, the main page shows two inputs for the email and password to sign in if the users already have an account. Otherwise, they can create an account with the \textit{Create} button below the login form on the main page, which will redirect them to the sign up page. Finally, a smaller link can lead them to the account recovery page in case they forgot their password.\\
+When the user download the app, the main page shows two inputs for the email and password to sign in if the user already have an account. If they don't have an account, they can create one with the \textit{Create} button below the login form on the main page, which will redirect them to the sign up page. Finally, a smaller link can lead them to the account recovery page in case they forgot their password.\\
 For the login process, the software looks into the database to find the matching combination of username and password or email and password for a user. After logging in, the user is redirected to his main page, \textit{My BookMark}.\\
 
 \subsection{Sign up}
 Membership requires basic information such as a unique username, a valid email, a password, and an optional phone number for password recovery. The password has to be at least 8 characters long, with one uppercase, one lowercase, one number and one symbol.\\
 The app also requires the user to agree with the terms and conditions, and optionally to subscribe to the newsletter. The terms and conditions are displayed in a scrollable pop-up that allows the users to read them without losing the data they've already input in the form.\\
-The signup process then creates a 8-digit token and sends it to the user in a confirmation email, in clear and in a hyperlink. The hyperlink leads to a confirmation page that will display the success of the confirmation.\\
-Once the email has been verified, the user can log into the app. For the first connection, the user must choose at least 3 genres of books they like for suggestion in the first time correct genre book.\\
+The sign up process then creates a 8-digit token and sends it to the user in a confirmation email, in clear and in a hyperlink. The hyperlink leads to a confirmation page that will display the success of the confirmation.\\
+Once the email has been verified, the user can log into the app. For the first connection, the user must choose at least 3 genres of books he or she likes to set as reading preferences for the recommendation algorithm.\\
 
 
 \subsection{My BookMark}
@@ -202,6 +202,15 @@ If the user wants to remove the book from his app library and from his bookshelf
 A separate page displays the recommended books for the user depending on the books he already owns. For this, we will design a personal machine learning algorithm inspired by popular suggestion algorithms like Netflix's, YouTube's, Instagram's or Amazon's.\\
 The page consists of a list of books and covers. If the user clicks on a book, it will toggle a simplified book view with the title, author, number of pages, and a + button to add the book to his bookshelf.\\
 
+\subsubsection{Statistics}\hfill\\
+
+The statistics page displays information about the user's reading history and bookshelf data in the form of graphs and numbers. The statistics displayed are the following:
+\begin{itemize}
+    \item Last books read: The names and links to the 3 books that were updated the most recently, whetter read or currently reading.
+    \item Graph of books read: A bar chart displaying the number of books read in the last 3 months.
+    \item Bookshelf completion: The number of books read over the total number of books in the bookshelf.
+\end{itemize}
+That way, the user can keep track of his current progress.
 
 \subsection{Physical Bookshelf}
 
@@ -260,17 +269,231 @@ For an audiobook, it plays the audiobook from the saved timestamp\\
 For the ebook, it opens to the correct page in the reading app.\\
 
 
-\subsection{Backend management}
+\section{Development Environment} 
+\subsection{Choice of software development platform}
 
-\subsubsection{Add a bookshelf}\hfill\\
+Our development environment will be mostly UNIX based and Apple oriented since most of us have Apple products such as iPhones or MacBooks. That way, we can use tools that are already provided in the Apple development environment, such as the Xcode IDE. Xcode is created by Apple and therefore optimized to create application for OS devices, with the possibility to run the app on a simulator or on a connected iPhone to see the progress, and it comes with built-in tools for iOS and MacOS development.\\
+The code and documentation will be held on a public GitHub repository to grant easy access and have a good overview of the project progress.\\ 
 
-\subsubsection{Remove user data}\hfill\\
+\begin{center}
+\begin{tabular}{ | m{1.9cm} | m{5.7cm}| } 
 
-\subsubsection{Clear bookshelf data}\hfill\\
+\hline
+Tool/language & Reasoning \\
+ \hline
+ Swift 5.5 &  Swift is a programming language created by Apple inc. in 2014 and is designed to be powerful and intuitive when writing code and applications for Apple OS devices. It has an intuitive syntax, close to C-based languages, and it can be used in combination with Xcode to preview the application interface while it is developed. We will use this language to create the front-end of the application with the default 5.5 version which is included in Xcode.\\
+  \hline
+ OVH VPS (Apache) &  The server is be a Virtual Private Server hosted on by OVH. It is configured with a Debian 10 OS, and Apache 2 for web hosting, and has basic access as well as a root access for doing all the configuration. The MySQL database is set up directly on the server.\\ 
+ \hline
+ MySQL & We need a database to manage the data related to books, users and bookshelves. MySQL is an open-source database management system, widely used and popular for handling small and big databases, easily installed on a server and is used in combination with the SQL language in order to manage the data.\\
+ \hline
+ \end{tabular}
+ 
+ \begin{tabular}{ | m{1.9cm} | m{5.7cm}| } 
+ \hline
+ PHP/JS & The backend website for management, whether it's users, books or bookshelves, will be in PHP and JS. PHP is the most common scripting language for web development, along with JavaScript, and the combination of both allow for a fast website with asynchronous queries and dynamic updates. We will especially be using JQuery to simplify the JavaScript syntax.\\
+ \hline
+ Python & Python is a high-level general-purpose programming language which supports both object-oriented and functional programming. Many public Python libraries focused on machine learning and AI are available, which is why we chose this language to create the AI part of our project. \\
+ \hline
+ C++ & C++ is a middle-level, compiled and object-orientated programming language. As we will be running the database for the application on a server, it is easier to have a middle to low level language for the API since the execution speed will be higher. Also, C++ has known libraries for API management which will simplify the API construction.\\
+ \hline
+ 
+\end{tabular}
+\end{center}
+\hfill
+
+\subsection{Cost Estimation}
+\hfill
+
+\begin{center}
+\begin{tabular}{ | m{4.6cm} | m{3cm}| } 
+
+\hline
+Resource & Price (Won) \\
+ \hline
+ Web Server  & 23.571 \\
+ \hline
+ Apple Developer License & 116.676 \\
+ \hline
+ 
+\end{tabular}
+\end{center}
+
+\hfill
+\subsection{Software in use}
+\subsubsection{Goodreads}\hfill\\
+
+Goodreads has an application on the market that includes some of the same functionalities as our project, but does not offer the option to connect with a physical bookshelf. Goodreads has a section called 'My Books', as seen in Figure \ref{fig:goodreads} which is designed to keep track of the books in the users collection, and offers the option to use the camera to scan the physical books in your collection. BookMark will offer a similar book management system, but will be synchronized with the users books placement in the physical bookshelf to create an even more powerful organizing tool for the user. \\
+
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=3cm]{Ressources/Software in use/goodreads.jpeg}
+    \caption{Goodreads app: My Books}
+    \label{fig:goodreads}
+\end{figure}
+
+\subsubsection{Amazon API}\hfill\\
+
+The application offers the functionality of 'Add a book' to the user's virtual bookshelf, which requires the app to be able to access some sort of database of books. For this purpose, BookMark will make use of an Amazon Books API for searching and looking up books available in Amazon. For the scope of this project, Amazon currently offers free access to a HTTP or REST API, which can be accessed with the help of a Lambda function for the backend. \\
+  
+
+\subsection{Task Distribution}
+\hfill
+
+%(If you want, you can provide this later at the nextphase-design)
+%       Which member is responsible for what? 
+
+\begin{center}
+\begin{tabular}{ | m{3.5cm} | m{4.1cm}| } 
+
+\hline
+Name & Responsibilities \\
+ \hline
+ Sarah Schegel  & ? \\
+ \hline
+ Mathilde Lærke Hansen & ? \\
+ \hline
+ Young Ha Hwang & ? \\
+ \hline
+ Anais Zhang & ? \\
+ \hline
+ Laura Vikke Mårtensson & ? \\
+ \hline
+ 
+\end{tabular}
+\end{center}
+
+\section{Specifications}
+
+\subsection{Database}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=9cm]{Ressources/Specifications/LDM.png}
+    \caption{Logical Data Model\cite{LDM}}
+    \label{fig:ldm}
+\end{figure}
+
+Figure \ref{fig:ldm} shows the Logical Data Model of the database. The primary keys of the tables are in bold, the types of the columns are on the left side and the names and constraints (check values and default values) of the columns are on the right side. The foreign keys are identified with a \# and linked to the table they are referencing.
+The main tables of our database are the 'user', 'book', 'bookshelf' and 'reading\_status'. Along with the associative tables and the other tables for satellite data, these four tables are the ones that will be used the most for managing our users and our bookshelves.
+
+\subsection{Log-in}
+
+The Log-in page as shown in figure \ref{fig:login} is the first page that the user will be met with when they have downloaded the application and opened it for the first time. The user will have to input username and password using the mobile keyboard, and the application will (use API?) to request the database if such a user exist, when the user presses 'Log-in'. If in existence in the database, the user will be guided to the home page, e.g 'My Bookmark'. If the user does not already have an account, a button called 'create' is displayed in the bottom of the screen, which will guide the user to the sign-up page. Lastly, if the user has forgotten their password, they have the option to request a new password from the log-in page.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=3cm]{Ressources/Specifications/Login.png}
+    \caption{Log-in page}
+    \label{fig:login}
+\end{figure}
+
+\subsection{Sign-up}
+If the user does not already have an account and have therefore been guided to the sign-up page, as seen in Figure \ref{fig:signup} there are several datapoints that the user will have to input in order to be created in the database. An username, Email, Phone number and sufficiently secure password should be inputted. Moreover, the user has to agree to the terms and conditions of the applications, of which can be accessed and read through a hyperlink. Lastly, the user has the opportunity to sign up for a newsletter, where they will be registered in a mailing list and send regular emails with personalized book recommendations and etc. based on their data. \\
+After the user's sign-up details has been approved and created in the database, the user will be guided to a new page, as seen in Figure \ref{fig:categories} where they have the option to choose their favorite genres such that the recommendations and search results in the app will become more relevant to the users personal preferences. 
+
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=3cm]{Ressources/Specifications/signup.png}
+    \caption{Sign-up page}
+    \label{fig:signup}
+\end{figure}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=3cm]{Ressources/Specifications/categories.png}
+    \caption{Preferences page}
+    \label{fig:categories}
+\end{figure}
+
+
+
+\subsection{My BookMark}
+The page 'My BookMark', as seen in Figure \ref{fig:mybookmark} is the first page the user will be guided to when they are already logged in and opens the app. It is the user's personal page where they will have the option to upload a photo of themselves in order to personalize their page, and they will be able to access different main functionalities of the app. At the top of the page, the user will have the option to press a 'back' button, which will guide them to xxxx, and a '+' button which will guide the user to the 'Add a book' page. \\
+
+'My Bookmark' will also preview of the user's current bookshelf with images of the bookcovers. They will have the option to view all the books in their collection from the the default 'My books' view, as well as a views called 'Now reading' which will provide different options if clicked on a book, as seen in Figure \ref{fig:book}. The user will be able to see their reading progress, rank the book, delete the book from their collection and keep reading the book. If the user chooses to 'Keep reading' the book will either be opened as an Ebook, or the physical bookshelf will light up where the pysical book is stored.  \\
+
+At the bottom of the page, which will be available from most pages within the application, the user has access to the four main sections of the application, as well as a '+' button for quick access to adding a new book to the user's collection. The first button will guide the user to the main page, the next to the 'My Bookmark' page, the third to the reading statistics page, and the last to the 'User Account' page.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=3cm]{Ressources/Specifications/mybookmark.png}
+    \caption{My Bookmark page}
+    \label{fig:mybookmark}
+\end{figure}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=3cm]{Ressources/Specifications/book.png}
+    \caption{My Book page}
+    \label{fig:book}
+\end{figure}
+
+\subsection{Add a book}
+When the user press a '+' button anywhere in the app, they will be met with a pop-up asking if they wish to add a physical book or an ebook. If they choose ebook, they will be be shown a 'search' page which will show updated suggestions based on what the user inputs in the search field. When the user has located the book they want to add, they will be guided to the 'Add a book' page, as seen in Figure \ref{fig:addabook}. \\
+This page previews information about the book, as well as ratings and reviews from other users of the application. The user will press the button 'Add My List' to add the book to their bookshelf in My Bookmark.\\
+
+If the user chooses to add a physical book, they will be guided to a new page using the camera in order to be able to scan the cover, ISBN or barcode of the book. Then the book is automatically added to the user's bookshelf in My Bookmark, and the physical bookshelf is updated to recognize this book as a part of its collection as well.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=3cm]{Ressources/Specifications/addabook.png}
+    \caption{Add a book page}
+    \label{fig:addabook}
+\end{figure}
+
+\subsection{Main page}
+The main page, as seen in Figure \ref{fig:mainpage}, functions as a mixture between an overview and a discover page, where the user will be able to view the books they are currently reading as well as discover new books, which the application suggests based on personal preferences. There will be recommended books based on the user's preferred genres, books similar to the one the user has already read and New Arrivals which fits the user's preferences. \\
+
+The user will also have access to a search function they can use based on book names and authors, which will search the database for the requested book or books.\\
+At the top left of the page, the user user will have the opportunity to to log-out of the application and at the top right the '+' button us present, guiding the user to the 'Add a book' page.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=3cm]{Ressources/Specifications/mainpage.png}
+    \caption{Main page}
+    \label{fig:mainpage}
+\end{figure}
+
+\subsection{User Account}
+The user account page, as seen in Figure \ref{fig:useracc}, previews the user's personal information as well as the option to change any of the information, or delete the account entirely. At the top of the page, the user has the option to log-out of the application or to access the 'Settings' page of the application, as seen in Figure \ref{fig:settings}. \\
+
+The settings page offers the user to customize different aspects of the application, such as a light/dark mode, language options and which notifications the user prefers to receive.
+
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=3cm]{Ressources/Specifications/useracc.png}
+    \caption{User Account page}
+    \label{fig:useracc}
+\end{figure}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=3cm]{Ressources/Specifications/settings.png}
+    \caption{Settings page}
+    \label{fig:settings}
+\end{figure}
+
+\subsection{Statistics}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 \begin{thebibliography}{00}
-\bibitem{RFID}
+\bibitem{RFID} 
 \url{https://gzandea.en.ecplaza.net/products/rfid-smart-bookshelveshf-intelligence-bookshelffile-management_3914989}
 
 \bibitem{Smartbookshelf}
@@ -284,6 +507,9 @@ For the ebook, it opens to the correct page in the reading app.\\
 
 \bibitem{Storygraph}
 \url{https://www.thestorygraph.com/}
+
+\bibitem{LDM}
+\url{https://drive.google.com/file/d/1qXDdPbP0vvrqVYIyJdMQ6C-DeG7IgjeZ/view?usp=sharing}
 
 \end{thebibliography}
 
