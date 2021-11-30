@@ -1,7 +1,7 @@
 USE bookmark;
 
 CREATE TABLE bookshelf (
-    id varchar(32) primary key,
+    id integer auto_increment primary key,
     width integer not null,
     height integer not null,
     depth integer not null,
@@ -23,6 +23,7 @@ CREATE TABLE book (
     isbn13 varchar(17) primary key,
     isbn11 varchar(11),
     series_name varchar(64),
+    series_position integer,
     book_name varchar(64) not null,
     date_published date,
     pages integer default 0,
