@@ -1,5 +1,8 @@
-BookMark
+BookMark - Bright Bookshelf
 ====
+
+Hanyang University, SE/AI project
+---
 
 ---
 
@@ -9,7 +12,7 @@ GUI mockups [(Figma)](https://www.figma.com/file/txDJQqtWLzodwYxILwvgNh/Bookshel
 
 UML [(draw.io)](https://drive.google.com/file/d/1qXDdPbP0vvrqVYIyJdMQ6C-DeG7IgjeZ/view?usp=sharing)
 
-Goodreads-books Dataset [(Kaggle)](https://www.kaggle.com/jealousleopard/goodreadsbooks/version/2)
+Book Recommendation System Dataset [(Kaggle)](https://www.kaggle.com/fahadmehfoooz/book-recommendation-system/data)
 
 ---
 
@@ -45,7 +48,7 @@ I. Introduction
 
 
 
-**AI Motivation**
+**Motivation**
 
 The **BookMark** project comes from the observation that many people today don't have the time or the motivation to read new books as they navigate their fast paced and overstimulated everyday life. Our goal is to provide with this smart bookshelf and application a simpler way to manage the books people are reading, whether it's by swapping from the physical book to the audiobook, by reminding them to read at certain times or by recommending them new books based on their current preferences, or by recommending new books to the users.
 
@@ -69,6 +72,10 @@ We will be using the Goodreads-books Dataset [1] that can be found on Kaggle. Th
 III. Methodology
 ---
 
+The approach we have chosen is a Collaborative Filtering algorithm. The idea is to consider similarities between users and at the same time similarities between items (here the books) to provide recommendations. The collaborative filtering approach is for example a part of Netflix's recommendation algorithm, even though it is combined with many other approaches.
+
+Collaborative filtering relies on the idea that if two users have a similar ranking of items, they will probably act similarly in the future, and thus 
+
 - Explaining your choice of algorithms (methods) 
 - Explaining features or code (if any)
 
@@ -85,12 +92,14 @@ IV. Evaluation & Analysis
 
 ---
 
-V. Related Work (e.g., existing studies)
+V. References
 ---
 
-- [1] Goodreads-books dataset [Kaggle](https://www.kaggle.com/jealousleopard/goodreadsbooks/version/2)
+Related work, existing studies, documentation, blogs…
 
-
+1) Book Recommendation System Dataset on [Kaggle](https://www.kaggle.com/fahadmehfoooz/book-recommendation-system/data) by Fahad Mehfooz
+2)  [Collaborative Filtering: Google Developers Documentation](https://developers.google.com/machine-learning/recommendation/collaborative/matrix)
+3) *Understand Netflix's recommendation algorithm* (French article), Tidiane CISSE & Yasmine BELHADRI, published on [Les Mondes Numériques](https://www.lesmondesnumeriques.net/2019/02/02/comprendre-lalgorithme-de-recommandation-de-netflix/) on February 2nd, 2019
 
 - Tools, libraries, blogs, or any documentation that you have used to do this project.
 

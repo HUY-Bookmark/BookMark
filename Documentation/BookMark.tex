@@ -10,9 +10,11 @@
 \usepackage{array}
 \usepackage{xurl}
 \usepackage{subfigure}
-\usepackage[utf8]{inputenc}
-
+\usepackage{listings}
+\usepackage{multicol}
+\usepackage{multirow}
 \usepackage{subfig}
+\usepackage[utf8]{inputenc}
 
 \makeatletter
 \newcommand{\linebreakand}{%
@@ -26,6 +28,39 @@
 \def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
     T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
     
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.95}
+
+
+% Code coloring
+\lstdefinelanguage{custom}[]{PHP}
+{
+morekeywords={public, class, extends, private, function},
+}
+
+\lstdefinestyle{php}{
+    morekeywords={function}
+    backgroundcolor=\color{backcolour},
+    commentstyle=\color{codegray},
+    keywordstyle=\color{codepurple},
+    numberstyle=\tiny\color{magenta},
+    stringstyle=\color{codegreen},
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,         
+    breaklines=true,
+    captionpos=b,  
+    keepspaces=true,
+    numbers=left,
+    numbersep=5pt,
+    showspaces=false,
+    showstringspaces=false,
+    showtabs=false,                
+    tabsize=2
+}
+\lstset{style=php}
+
 % Define macros
 \newcommand{\authorBlock}[6]
 {
@@ -292,11 +327,9 @@ Tool/language & Reasoning \\
  
  \begin{tabular}{ | m{1.9cm} | m{5.7cm}| } 
  \hline
- PHP/JS & The backend website for management, whether it's users, books or bookshelves, will be in PHP and JS. PHP is the most common scripting language for web development, along with JavaScript, and the combination of both allow for a fast website with asynchronous queries and dynamic updates. We will especially be using JQuery to simplify the JavaScript syntax.\\
+ PHP/JS & The backend website for management, whether it's users, books or bookshelves, will be in PHP and JS. PHP is the most common scripting language for web development, along with JavaScript, and the combination of both allow for a fast website with asynchronous queries and dynamic updates. We will especially be using PHP as the API language since it is one of the easiest ways to connect to a database and fetch or send data. As PHP can be object-oriented, its inheritance principles will greatly simplify the building of database queries.\\
  \hline
  Python & Python is a high-level general-purpose programming language which supports both object-oriented and functional programming. Many public Python libraries focused on machine learning and AI are available, which is why we chose this language to create the AI part of our project. \\
- \hline
- C++ & C++ is a middle-level, compiled and object-orientated programming language. As we will be running the database for the application on a server, it is easier to have a middle to low level language for the API since the execution speed will be higher. Also, C++ has known libraries for API management which will simplify the API construction.\\
  \hline
  
 \end{tabular}
@@ -329,7 +362,7 @@ Goodreads has an application on the market that includes some of the same functi
 
 \begin{figure}[h]
     \centering
-    \includegraphics[width=3cm]{Ressources/Software/goodreads.jpeg}
+    \includegraphics[width=3cm]{Resources/Software/goodreads.jpeg}
     \caption{Goodreads app: My Books}
     \label{fig:goodreads}
 \end{figure}
@@ -371,7 +404,7 @@ Name & Responsibilities \\
 
 \begin{figure}[h]
     \centering
-    \includegraphics[width=9cm]{Ressources/Specifications/LDM.png}
+    \includegraphics[width=9cm]{Resources/Specifications/LDM.png}
     \caption{Logical Data Model\cite{LDM}}
     \label{fig:ldm}
 \end{figure}
@@ -385,7 +418,7 @@ The Log-in page as shown in figure \ref{fig:login} is the first page that the us
 
 \begin{figure}[h]
     \centering
-    \includegraphics[width=3cm]{Ressources/Specifications/Login.png}
+    \includegraphics[width=3cm]{Resources/Specifications/Login.png}
     \caption{Log-in page}
     \label{fig:login}
 \end{figure}
@@ -397,14 +430,14 @@ After the user's sign-up details has been approved and created in the database, 
 
 \begin{figure}[h]
     \centering
-    \includegraphics[width=3cm]{Ressources/Specifications/signup.png}
+    \includegraphics[width=3cm]{Resources/Specifications/signup.png}
     \caption{Sign-up page}
     \label{fig:signup}
 \end{figure}
 
 \begin{figure}[h]
     \centering
-    \includegraphics[width=3cm]{Ressources/Specifications/categories.png}
+    \includegraphics[width=3cm]{Resources/Specifications/categories.png}
     \caption{Preferences page}
     \label{fig:categories}
 \end{figure}
@@ -414,20 +447,20 @@ After the user's sign-up details has been approved and created in the database, 
 \subsection{My BookMark}
 The page 'My BookMark', as seen in Figure \ref{fig:mybookmark} is the first page the user will be guided to when they are already logged in and opens the app. It is the user's personal page where they will have the option to upload a photo of themselves in order to personalize their page, and they will be able to access different main functionalities of the app. At the top of the page, the user will have the option to press a 'back' button, which will guide them to xxxx, and a '+' button which will guide the user to the 'Add a book' page. \\
 
-'My Bookmark' will also preview of the user's current bookshelf with images of the bookcovers. They will have the option to view all the books in their collection from the the default 'My books' view, as well as a views called 'Now reading' which will provide different options if clicked on a book, as seen in Figure \ref{fig:book}. The user will be able to see their reading progress, rank the book, delete the book from their collection and keep reading the book. If the user chooses to 'Keep reading' the book will either be opened as an Ebook, or the physical bookshelf will light up where the pysical book is stored.  \\
+'My Bookmark' will also preview of the user's current bookshelf with images of the bookcovers. They will have the option to view all the books in their collection from the the default 'My books' view, as well as a views called 'Now reading' which will provide different options if clicked on a book, as seen in Figure \ref{fig:book}. The user will be able to see their reading progress, rank the book, delete the book from their collection and keep reading the book. If the user chooses to 'Keep reading' the book will either be opened as an Ebook, or the physical bookshelf will light up where the physical book is stored.  \\
 
 At the bottom of the page, which will be available from most pages within the application, the user has access to the four main sections of the application, as well as a '+' button for quick access to adding a new book to the user's collection. The first button will guide the user to the main page, the next to the 'My Bookmark' page, the third to the reading statistics page, and the last to the 'User Account' page.
 
 \begin{figure}[h]
     \centering
-    \includegraphics[width=3cm]{Ressources/Specifications/mybookmark.png}
+    \includegraphics[width=3cm]{Resources/Specifications/mybookmark.png}
     \caption{My Bookmark page}
     \label{fig:mybookmark}
 \end{figure}
 
 \begin{figure}[h]
     \centering
-    \includegraphics[width=3cm]{Ressources/Specifications/book.png}
+    \includegraphics[width=3cm]{Resources/Specifications/book.png}
     \caption{My Book page}
     \label{fig:book}
 \end{figure}
@@ -440,7 +473,7 @@ If the user chooses to add a physical book, they will be guided to a new page us
 
 \begin{figure}[h]
     \centering
-    \includegraphics[width=3cm]{Ressources/Specifications/addabook.png}
+    \includegraphics[width=3cm]{Resources/Specifications/addabook.png}
     \caption{Add a book page}
     \label{fig:addabook}
 \end{figure}
@@ -453,7 +486,7 @@ At the top left of the page, the user user will have the opportunity to to log-o
 
 \begin{figure}[h]
     \centering
-    \includegraphics[width=3cm]{Ressources/Specifications/mainpage.png}
+    \includegraphics[width=3cm]{Resources/Specifications/mainpage.png}
     \caption{Main page}
     \label{fig:mainpage}
 \end{figure}
@@ -466,14 +499,14 @@ The settings page offers the user to customize different aspects of the applicat
 
 \begin{figure}[h]
     \centering
-    \includegraphics[width=3cm]{Ressources/Specifications/useracc.png}
+    \includegraphics[width=3cm]{Resources/Specifications/useracc.png}
     \caption{User Account page}
     \label{fig:useracc}
 \end{figure}
 
 \begin{figure}[h]
     \centering
-    \includegraphics[width=3cm]{Ressources/Specifications/settings.png}
+    \includegraphics[width=3cm]{Resources/Specifications/settings.png}
     \caption{Settings page}
     \label{fig:settings}
 \end{figure}
@@ -481,11 +514,113 @@ The settings page offers the user to customize different aspects of the applicat
 \subsection{Statistics}
 
 
+\section{Architecture Design \& Implementation}
+\subsection{Overall architecture}
+
+%Provide a figure of overall system architecture (modules or software components, any relationships between)
+
+%Your figure should include the following (recommended, feel free to choose any way that you like):
+%    * Box –a module or software component. Each box has a title, description, and its required classes (we will discuss more in class)
+%    * Directed edge –relationship between the modules describing which module is used where
+%    * Labels –functions or relationship counts on top of each edge (optional)
+
+BookMark is divided into two main modules: the frontend and the backend (see Figure  \ref{fig:architecture}). The frontend is the application in Swift, hosted in its own git repository, and available on iOS devices. This application, when connected to the internet, sends HTTP requests, with a JSON body most of the time, to the server to fetch data.
+
+\begin{figure}[h]
+    \includegraphics[width=\columnwidth]{Resources/Architecture/Overall.png} 
+    \caption{Overall architecture}
+    \label{fig:architecture}
+\end{figure}
+
+The backend server has three main endpoints for the API : book, user and bookshelf. Those endpoints are respectively available by querying the \textit{/api/book,} \textit{/api/user} and \textit{/api/bookshelf} of the BookMark URL. The rest of the URL parameters are used to specify the actions or the data required for the request. For example, \textit{/api/book/id/0439358078} will get the data of the book that has the ISBN13 "0439358078", whereas \textit{/api/book/search/Harry} will search for all books that have "Harry" in their title or as their author. Most of the time though, the data is sent in JSON in the body for more security.\\
+Once the request has gotten to the server, the API on the server processes the data and creates an SQL request to send to the database. Then, it connects to the database, which is hosted locally, and fetches the raw data. This data is then processed again to be output in a JSON format readable for the Swift app.
 
 
 
+\subsection{Directory organization}
+
+\begin{center}
+\begin{tabular}{| m{3cm} | p{4.6cm}|} 
+
+\hline
+\textbf{Directory} & \textbf{Contents} \\
+ \hline
+ /BookMark  & Root directory, contains the .git* files and all subsequent folders.\\
+ \hline
+ /BookMark /Documentation & Documentation folder containing the LaTeX file and the PDF, as well as a subfolder \textit{/Resources} for the images used in the documentation. \\
+ \hline
+ /BookMark /Resources & Folder containing all exterior data such as the LMD, the database scripts. \\
+ \hline
+ /BookMark/Sources /AI & Code directory, contains the Jupyter notebook for the AI recommendation algorithm. \\
+ \hline
+ /BookMark/Sources /BookMarkAPI & Code directory, contains the backend code for the server. This directory is a git submodule, so it is managed and versioned independently of the global /BookMark directory. This is also the root directory for the website. It is built on an MVC pattern, and so divided into three main folders: \textit{controllers}, \textit{views} and \textit{api}. The controller files do the redirection and the URL parsing, while the views display the output, and the api files act as "models" and query the database. \\
+ \hline
+ /BookMark/Sources /BookMarkSwiftApp & Code directory, contains the code for the Swift application. This directory is an Xcode project as well as a git submodule, and just like the BookMarkAPI, is versioned independently of the rest of the git directory.\\
+ \hline
+ 
+\end{tabular}
+\end{center}
+
+\subsection{Module 1: Database}
+%Provide a detailed description of each module: purpose, functionality, location of source code, class components, where it’s taken from, how/why you used it, and others.Any type of graphical representation is also recommended.
+
+The database is a MySQL-server database, set directly on the server. The database for BookMark stores all the book, bookshelves and user information. The script for the database initialisation is located in the \textit{/Resources/Database} folder. But neither the users nor the developers should access the database directly, they should instead use the API to insert, update or delete data.\\
+The structure of the database has been built as an LDM model that can be seen in Figure \ref{fig:ldm}.
+
+\begin{figure}[h]
+    \includegraphics[width=\columnwidth]{Resources/Architecture/Database.png} 
+    \caption{Local instance of the database}
+    \label{fig:dblocal}
+\end{figure}
+
+\subsection{Module 2: API}
+
+Since an application cannot directly send requests to a database (and since that wouldn't be secure), the API acts as an interface between the application and the database.
+Our API is coded in object-oriented PHP, and can be required with the following URL format on the BookMark website:\\ \textit{/api/endpoint/param1/param2/...}\\
+where endpoint is one of the three endpoints (user, book or bookshelf), and the parameters are sent to specify the requested action or provide additional data for the action. On the server, everything is redirected to the index page, and the URL is then parsed by a "router" file, that will split it with the '/'s and isolate each parameter in an array. The router file also gets the method of the request (GET, POST, PUT, etc.) and then calls the corresponding API endpoint.\\
+
+The API in itself is an abstract class (Api) that contains all the methods for building a query, connecting to the database and sending the query. The endpoints book, user, and bookshelf extend the Api class (ApiBook, ApiUser and ApiBookshelf) and contain specific methods for parsing and handling the data they are given.\\
+When initializing an instance of the class being called by the router, the router sends it the URL parameters in an array and the name of the method used in a string. This method is used to switch between different cases. These different cases call to the functions which process the data, and which in turn call the functions to send or fetch data from or to the database.\\
+The API is based on a CRUD (Create, Read, Update, Delete) paradigm, so the inner functions are meant to perform only one of the four following actions. Depending on the method used, the method used will be different: for example a Get request will trigger a Read action, whereas a Patch request will trigger an Update action.
+
+The outputs of the API are formatted in JSON and echoed simply in the page. The API can also return response codes if errors occurred during the processing of the request, the most common ones being Forbidden (403), Not Found(404) or Method Not Allowed (405). Otherwise the usual response code is the default code Ok (200).
 
 
+\begin{center}
+\begin{lstlisting}[language=custom]
+class ApiBook extends Api
+{
+    private $_response ;
+    public function __construct ($url, $method)
+    {
+        switch (strtolower($method)) {
+            case "get":
+                $this->_response = $this->getBook($url) ;
+                break ;
+            default:
+                $this->_response = $this->errorResponse("METHOD NOT ALLOWED") ;
+                http_response_code(405) ;
+        }
+        echo json_encode($this->_response) ;
+    }
+}
+\end{lstlisting}
+\textit{Example of initialization for the book endpoint}
+\end{center}
+
+\subsection{Module 3: BookMark Application}
+
+The frontend application is a Swift, iOS oriented app. Its purpose is to allow the user to manage his account, books and bookshelf from a graphical interface. We use Xcode as our development IDE, so at the creation of the project, the module is divided into three main folders: BookMark, with the main Swift code, BookMarkTests, comprising the data tests, and BookMarkUITests, with the graphical user interface tests.\\
+
+The main code is divided into views, each view representing a page and querying its own data. Each page can send its own request to the API with the URLRequest Swift library. The Model.swift file contains the \textit{Codable} structures for the JSON parsing. These structures are written to match the output of the API.
+
+\section{Use Cases}
+You have to provide multiple use cases to demonstrate what you have implemented. Each use case should clear state that which software requirement/specification to satisfy. 
+    
+    A.Use case 1
+        Provide a flow chart or step-wise description on how to use a function of your software. 
+        
+        Provide a snapshot (screenshot) of each use case if possible. 
 
 
 
