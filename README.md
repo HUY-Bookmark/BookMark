@@ -6,19 +6,20 @@ Hanyang University, SE/AI project
 
 ---
 
-**Quick links**
+### Quick links
 
-GUI mockups [(Figma)](https://www.figma.com/file/txDJQqtWLzodwYxILwvgNh/Bookshelf)
-
-UML [(draw.io)](https://drive.google.com/file/d/1qXDdPbP0vvrqVYIyJdMQ6C-DeG7IgjeZ/view?usp=sharing)
-
-Book Recommendation System Dataset [(Kaggle)](https://www.kaggle.com/fahadmehfoooz/book-recommendation-system/data)
+> GUI mockups [(Figma)](https://www.figma.com/file/txDJQqtWLzodwYxILwvgNh/Bookshelf)
+>
+> UML [(draw.io)](https://drive.google.com/file/d/1qXDdPbP0vvrqVYIyJdMQ6C-DeG7IgjeZ/view?usp=sharing)
+>
+> Book Recommendation System Dataset [(Kaggle)](https://www.kaggle.com/fahadmehfoooz/book-recommendation-system/data)
+>
 
 ---
 
-**Contributors**
+### Contributors
 
-The contributors of this project are:
+This team has been created for a joint project between the Software Engineering (SE) and the Artificial Intelligence and Application (AI) courses in Hanyang University. The contributors of this project are:
 
 - Mathilde Lærke Hansen, 9077620215, SE
   Department of Information Systems
@@ -30,8 +31,6 @@ The contributors of this project are:
   Department of Information Systems
 - Laura Vikke Mårtensson, 9077020219, SE
   Department of Computer Science
-
-This team has been created for a joint project between the Software Engineering (SE) and the Artificial Intelligence and Application (AI) courses in Hanyang University.
 
 
 
@@ -63,7 +62,170 @@ We would also like to include some image recognition libraries to scan the barco
 II. Dataset
 ---
 
-We will be using the Goodreads-books Dataset [1] that can be found on Kaggle. This dataset comes from the Goodreads API, which is a software already in use that we looked at when preparing this project. A few adjustments were made directly on the dataset where some misplaced `,`created reading issues for `pandas`, but that issue has been quickly solved by removing the problematic commas.
+The inputs for this study will be based on the Book Recommendation System project by Fahad Mehfooz [1] that can be found on Kaggle. This project feeds on three datasets : books, users and ratings. This data has also been used as the source for the BookMark database.
+
+### a. Books dataset
+
+The books dataset contains simple data about the books. The books are identified by their ISBN, and invalid ISBNs have already been removed from the dataset by the author. The additional information about each book (title, author, year of publication and publisher) has been extracted from Amazon. The dataset also contains links to the Amazon covers of each book in small, medium and large size. The dataset contains a total of 271 361 books.
+
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>ISBN</th>
+      <th>Book-Title</th>
+      <th>Book-Author</th>
+      <th>Year-Of-Publication</th>
+      <th>Publisher</th>
+      <th>Image-URL-L</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0195153448</td>
+      <td>Classical Mythology</td>
+      <td>Mark P. O. Morford</td>
+      <td>2002</td>
+      <td>Oxford University Press</td>
+      <td>http://images.amazon.com/images/P/0195153448.0...</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>0002005018</td>
+      <td>Clara Callan</td>
+      <td>Richard Bruce Wright</td>
+      <td>2001</td>
+      <td>HarperFlamingo Canada</td>
+      <td>http://images.amazon.com/images/P/0002005018.0...</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>0060973129</td>
+      <td>Decision in Normandy</td>
+      <td>Carlo D'Este</td>
+      <td>1991</td>
+      <td>HarperPerennial</td>
+      <td>http://images.amazon.com/images/P/0060973129.0...</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>0374157065</td>
+      <td>Flu: The Story of the Great Influenza Pandemic...</td>
+      <td>Gina Bari Kolata</td>
+      <td>1999</td>
+      <td>Farrar Straus Giroux</td>
+      <td>http://images.amazon.com/images/P/0374157065.0...</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>0393045218</td>
+      <td>The Mummies of Urumchi</td>
+      <td>E. J. W. Barber</td>
+      <td>1999</td>
+      <td>W. W. Norton &amp;amp; Company</td>
+      <td>http://images.amazon.com/images/P/0393045218.0...</td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+### b. Users dataset
+
+The users dataset contains informations for the user's id, location and age. There is not much more to this dataset since we don't take into account the geographical location or the age of the user in our recommendation system. Also the age data in this dataset is quite uneven, not always available.
+
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>User-ID</th>
+      <th>Location</th>
+      <th>Age</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1</td>
+      <td>nyc, new york, usa</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2</td>
+      <td>stockton, california, usa</td>
+      <td>18.0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>3</td>
+      <td>moscow, yukon territory, russia</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>4</td>
+      <td>porto, v.n.gaia, portugal</td>
+      <td>17.0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>5</td>
+      <td>farnborough, hants, united kingdom</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+### c. Ratings dataset
+
+The ratings dataset associates an ISBN and a user ID to a score expressed as an integer on a scale from 0 to 10, the highest value being 10. This dataset contains a total of 1 149 781 lines, from which we can isolate a total of 105 283 unique users and 340 556 unique book ISBNs. The ratings dataset will be the main dataset used for our project, as our collaborative filtering approach doesn't require more than IDs for both books and users. The users and books datasets are here to provide additional informations, especially about the books.
+
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>userid</th>
+      <th>ISBN</th>
+      <th>bookrating</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>276725</td>
+      <td>034545104X</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>276726</td>
+      <td>0155061224</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>276727</td>
+      <td>0446520802</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>276729</td>
+      <td>052165615X</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>276729</td>
+      <td>0521795028</td>
+      <td>6</td>
+    </tr>
+  </tbody>
+</table>
 
 
 
@@ -72,15 +234,13 @@ We will be using the Goodreads-books Dataset [1] that can be found on Kaggle. Th
 III. Methodology
 ---
 
-The approach we have chosen is a Collaborative Filtering algorithm. The idea is to consider similarities between users and at the same time similarities between items (here the books) to provide recommendations. The collaborative filtering approach is for example a part of Netflix's recommendation algorithm, even though it is combined with many other approaches.
+The approach we have chosen is a Collaborative Filtering algorithm. Collaborative filtering relies on the idea that if two users have a similar ranking of given items, they will probably act similarly in the future. Thus, if one of them likes something new, we can recommend it to the other and he will probably like it too. The advantage of collaborative filtering is that it doesn't need specific data about the items themselves, whether it's the books or the users, and it doesn't either have to process the content it is analyzing. Famous examples of collaborative filtering are movies and TV shows, as the collaborative filtering approach is for example a part of Netflix's recommendation algorithm, even though it is combined with many other approaches. On the contrary, content-based filtering only takes into account the data of a given user to compute recommendations.
 
-Collaborative filtering relies on the idea that if two users have a similar ranking of items, they will probably act similarly in the future. Thus we can give recommendations to a user based on the items of a user with a similar "taste".
+In our case, the idea is to consider similarities between users and at the same time similarities between items (here the books) to provide recommendations.
 
 
 
-Collaborative Filtering approach
-
-Model:
+Collaborative Filtering approach:
 
 1. Map user ID to a "user vector" via an embedding matrix
 2. Map book ID to a "book vector" via an embedding matrix
@@ -88,18 +248,9 @@ Model:
 4. Train the embeddings via gradient descent using all known user-book pairs.
 
 
-## Libraries & Import
 
 
-```python
-%cd bookai
-!ls
-```
-
-    /Users/laura/Desktop/5_sem/SoftwareEngineering/bookai
-    Books.csv   Ratings.csv Users.csv
-
-
+### a. Libraries & Import
 
 ```python
 import pandas as pd
@@ -123,56 +274,13 @@ df.head()
 
 
 
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>userid</th>
-      <th>ISBN</th>
-      <th>bookrating</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>276725</td>
-      <td>034545104X</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>276726</td>
-      <td>0155061224</td>
-      <td>5</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>276727</td>
-      <td>0446520802</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>276729</td>
-      <td>052165615X</td>
-      <td>3</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>276729</td>
-      <td>0521795028</td>
-      <td>6</td>
-    </tr>
-  </tbody>
-</table>
+### b. Preprocessing
 
-
-
-## Preprocessing
+Before starting to train the dataset, we want to clear the data from all redundancies and isolate all unique features that will be used for identification, whether it is for the books or for the users. So first, we get a list of all the uniue user id's and book ISBNs, and then we remap the dataframe values with the isolated unique values.
 
 
 ```python
-user_ids = df["userid"].unique().tolist() # List of all unique user id's
+user_ids = df["userid"].unique().tolist() 
 user2user_encoded = {x: i for i, x in enumerate(user_ids)} # map the unique user id's in sequence from 0 - n
 userencoded2user = {i: x for i, x in enumerate(user_ids)}  # map the unique user id's from 0 - n (the other way around)
 
@@ -185,75 +293,8 @@ df["book"] = df["ISBN"].map(book2book_encoded)
 ```
 
 
-```python
-df.head()
-```
 
-
-
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>userid</th>
-      <th>ISBN</th>
-      <th>bookrating</th>
-      <th>user</th>
-      <th>book</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>276725</td>
-      <td>034545104X</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>276726</td>
-      <td>0155061224</td>
-      <td>5</td>
-      <td>1</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>276727</td>
-      <td>0446520802</td>
-      <td>0</td>
-      <td>2</td>
-      <td>2</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>276729</td>
-      <td>052165615X</td>
-      <td>3</td>
-      <td>3</td>
-      <td>3</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>276729</td>
-      <td>0521795028</td>
-      <td>6</td>
-      <td>3</td>
-      <td>4</td>
-    </tr>
-  </tbody>
-</table>
-
-
+Then, we normalize the data by getting the minimum and the maximum of the book ratings and we apply a lambda function to get all the ratings in a range between 0 and 1 for easier training. The training is then done on 80% of the data, and validated on 20%.
 
 
 ```python
@@ -262,15 +303,6 @@ num_books = len(book_encoded2book)
 min_rating = min(df["bookrating"])
 max_rating = max(df["bookrating"])
 
-print("Number of users: {}, Number of books: {}, Min rating: {}, Max rating: {}".format(
-        num_users, num_books, min_rating, max_rating))
-```
-
-    Number of users: 105283, Number of books: 340556, Min rating: 0, Max rating: 10
-
-
-
-```python
 df = df.sample(frac=1, random_state=42) # Shuffle the dataframe
 x = df[["user", "book"]].values
 
@@ -287,7 +319,11 @@ x_train, x_test, y_train, y_test = (
 )
 ```
 
-## Model & Training
+
+
+### c. Model & Training
+
+For training, we wil use the Keras library. 
 
 
 ```python
@@ -359,9 +395,8 @@ plt.show()
 ```
 
 
-​    
 ![png](/Users/ellana/Downloads/recommendations/output_13_0.png)
-​    
+    
 
 
 
@@ -372,7 +407,7 @@ plt.show()
 #model = keras.models.load_model('collaborative_filtering_model')
 ```
 
-## User Recommendations & JSON Output
+###    User Recommendations & JSON Output
 
 
 ```python
@@ -410,6 +445,10 @@ for row in recommended_books.itertuples():
     print(row.title, ":", row.author)
 
 ```
+
+
+
+
 
     Showing recommendations for user: 95554
     ====================================
@@ -454,6 +493,8 @@ json_version = json.dumps(rec_dict, indent = 2)
 print(json_version)
 ```
 
+
+
     {
       "user_id": 95554,
       "high_rating_books_ISBN": [
@@ -497,9 +538,9 @@ V. References
 
 Related work, existing studies, documentation, blogs…
 
-1) Book Recommendation System Dataset on [Kaggle](https://www.kaggle.com/fahadmehfoooz/book-recommendation-system/data) by Fahad Mehfooz
-2)  [Collaborative Filtering: Google Developers Documentation](https://developers.google.com/machine-learning/recommendation/collaborative/matrix)
-3) *Understand Netflix's recommendation algorithm* (French article), Tidiane CISSE & Yasmine BELHADRI, published on [Les Mondes Numériques](https://www.lesmondesnumeriques.net/2019/02/02/comprendre-lalgorithme-de-recommandation-de-netflix/) on February 2nd, 2019
+[1]: https://www.kaggle.com/fahadmehfoooz/book-recommendation-system/data	"Book Recommendation System Dataset by Fahad Mehfooz / Kaggle dataset"
+[2]: https://developers.google.com/machine-learning/recommendation/collaborative/matrix	"Collaborative Filtering: Google Developers Documentation"
+[3]: https://www.lesmondesnumeriques.net/2019/02/02/comprendre-lalgorithme-de-recommandation-de-netflix/	"Comprendre l'algorithme de recommandation de Netflix (Understand Netflix's recommendation algorithm), Tidiane CISSE &amp; Yasmine BELHADRI, published on Les Mondes Numériques on February 2nd, 2019"
 
 - Tools, libraries, blogs, or any documentation that you have used to do this project.
 
