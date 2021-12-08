@@ -323,7 +323,7 @@ x_train, x_test, y_train, y_test = (
 
 ### c. Model & Training
 
-For training, we wil use the Keras library. 
+¬For training the Collaborative filtering model, we will use the Keras library. The basic structure of the model consists of an initialization of the two embedding matrices: one for the users, and one for the books, as well as a bias vector for each matrix. We choose the embedding size, which will represent each user and book, to be 50. The embeddings are randomly initialized, and the sigmoid function are applied to each dot product in order to predict a rating between 0 and 1. The loss function used to calculate the distance between the predicted rating and the actual rating is binary cross-entropy, and the Adam optimizer algorithm is used to tune the embeddings through gradient descent.
 
 
 ```python
@@ -370,6 +370,7 @@ model.compile(
     optimizer = keras.optimizers.Adam(learning_rate = 0.001) # Adam optimization algorithm 
 )
 ```
+We now train the embeddings by stochastic gradient descent with a batch size of 50 samples. We iterate the training cycle 5 times to see if more epochs leads to better performance.
 
 
 ```python
@@ -382,7 +383,7 @@ history = model.fit(
     validation_data = (x_test, y_test),
 )
 ```
-
+The plot presenting the model loss function shows that the loss on the training set indeed does improve for each epoch, but the loss for the test set already plateaus after 1 epoch.
 
 ```python
 plt.plot(history.history["loss"])
