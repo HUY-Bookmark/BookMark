@@ -396,7 +396,6 @@ plt.show()
 ```
 
 
-![png](/Users/ellana/Downloads/recommendations/output_13_0.png)
     
 
 
@@ -528,7 +527,8 @@ print(json_version)
 IV. Evaluation & Analysis
 ---
 
-- Graphs, tables, any statistics (if any)
+Model Loss:
+![png](/Users/ellana/Downloads/recommendations/output_13_0.png)
 
 
 
@@ -539,11 +539,11 @@ V. References
 
 Related work, existing studies, documentation, blogs…
 
-[1]: https://www.kaggle.com/fahadmehfoooz/book-recommendation-system/data	"Book Recommendation System Dataset by Fahad Mehfooz / Kaggle dataset"
-[2]: https://developers.google.com/machine-learning/recommendation/collaborative/matrix	"Collaborative Filtering: Google Developers Documentation"
-[3]: https://www.lesmondesnumeriques.net/2019/02/02/comprendre-lalgorithme-de-recommandation-de-netflix/	"Comprendre l'algorithme de recommandation de Netflix (Understand Netflix's recommendation algorithm), Tidiane CISSE &amp; Yasmine BELHADRI, published on Les Mondes Numériques on February 2nd, 2019"
+- https://www.kaggle.com/fahadmehfoooz/book-recommendation-system/data	"Book Recommendation System Dataset by Fahad Mehfooz / Kaggle dataset"
+- https://developers.google.com/machine-learning/recommendation/collaborative/matrix	"Collaborative Filtering: Google Developers Documentation"
+- https://www.lesmondesnumeriques.net/2019/02/02/comprendre-lalgorithme-de-recommandation-de-netflix/	"Comprendre l'algorithme de recommandation de Netflix (Understand Netflix's recommendation algorithm), Tidiane CISSE &amp; Yasmine BELHADRI, published on Les Mondes Numériques on February 2nd, 2019"
 
-- Tools, libraries, blogs, or any documentation that you have used to do this project.
+
 
 
 
@@ -552,5 +552,4 @@ Related work, existing studies, documentation, blogs…
 VI. Conclusion
 ---
 
-Discussion
-
+The approach described in this project is just one of the many ways you could go about building a recommendation system. The hyperparameters used was chosen according to what is normally considered 'appropriate', but if there had been more time, it would definitely have been a benefit to do a grid search on the different hyperparameters, as well as tweaking different aspects of the model in order to see if it would have approved performance. We could also have chosen to implement a simpler model to build a recommendation system, or even used a neural network in order to introduce deep learning. All in all we are satisfied with the performance we were able to achieve, but there are definitely ways upon we could have improved the whole process.
