@@ -13,7 +13,12 @@ Hanyang University, SE/AI project
 > UML [(draw.io)](https://drive.google.com/file/d/1qXDdPbP0vvrqVYIyJdMQ6C-DeG7IgjeZ/view?usp=sharing)
 >
 > Book Recommendation System Dataset [(Kaggle)](https://www.kaggle.com/fahadmehfoooz/book-recommendation-system/data)
+
+
+
+> [YouTube presentation]([https://youtu.be/13PwAViGRXg         ](https://youtu.be/13PwAViGRXg))
 >
+> [YouTube demo (timestamp)](https://youtu.be/13PwAViGRXg?t=296)
 
 ---
 
@@ -323,7 +328,7 @@ x_train, x_test, y_train, y_test = (
 
 ### c. Model & Training
 
-¬For training the Collaborative filtering model, we will use the Keras library. The basic structure of the model consists of an initialization of the two embedding matrices: one for the users, and one for the books, as well as a bias vector for each matrix. We choose the embedding size, which will represent each user and book, to be 50. The embeddings are randomly initialized, and the sigmoid function are applied to each dot product in order to predict a rating between 0 and 1. The loss function used to calculate the distance between the predicted rating and the actual rating is binary cross-entropy, and the Adam optimizer algorithm is used to tune the embeddings through gradient descent.
+For training the Collaborative filtering model, we will use the Keras library. The basic structure of the model consists of an initialization of the two embedding matrices: one for the users, and one for the books, as well as a bias vector for each matrix. We choose the embedding size, which will represent each user and book, to be 50. The embeddings are randomly initialized, and the sigmoid function are applied to each dot product in order to predict a rating between 0 and 1. The loss function used to calculate the distance between the predicted rating and the actual rating is binary cross-entropy, and the Adam optimizer algorithm is used to tune the embeddings through gradient descent.
 
 
 ```python
@@ -396,7 +401,7 @@ plt.show()
 ```
 
 
-    
+​    
 
 
 
@@ -520,15 +525,13 @@ print(json_version)
 
 
 
-
-
 ---
 
 IV. Evaluation & Analysis
 ---
 
 Model Loss:
-![png](/Users/ellana/Downloads/recommendations/output_13_0.png)
+![png](Resources/output_13_0.png)
 
 
 
@@ -542,8 +545,6 @@ Related work, existing studies, documentation, blogs…
 - https://www.kaggle.com/fahadmehfoooz/book-recommendation-system/data	"Book Recommendation System Dataset by Fahad Mehfooz / Kaggle dataset"
 - https://developers.google.com/machine-learning/recommendation/collaborative/matrix	"Collaborative Filtering: Google Developers Documentation"
 - https://www.lesmondesnumeriques.net/2019/02/02/comprendre-lalgorithme-de-recommandation-de-netflix/	"Comprendre l'algorithme de recommandation de Netflix (Understand Netflix's recommendation algorithm), Tidiane CISSE &amp; Yasmine BELHADRI, published on Les Mondes Numériques on February 2nd, 2019"
-
-
 
 
 
