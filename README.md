@@ -8,17 +8,19 @@ Hanyang University, SE/AI project
 
 ### Quick links
 
-> GUI mockups [(Figma)](https://www.figma.com/file/txDJQqtWLzodwYxILwvgNh/Bookshelf)
->
-> UML [(draw.io)](https://drive.google.com/file/d/1qXDdPbP0vvrqVYIyJdMQ6C-DeG7IgjeZ/view?usp=sharing)
->
-> Book Recommendation System Dataset [(Kaggle)](https://www.kaggle.com/fahadmehfoooz/book-recommendation-system/data)
+**YouTube demo**
+
+[![png](./Resources/images/Demo.png)](https://youtu.be/t7TrTA7m7hw "BookMark Demo")
+
+**YouTube presentation**
+
+[![png](./Resources/images/App.png)](https://youtu.be/13PwAViGRXg)
+
+**GUI mockups**
+
+[![png](./Resources/images/Figma.png)](https://www.figma.com/file/txDJQqtWLzodwYxILwvgNh/Bookshelf)
 
 
-
-> [YouTube presentation]([https://youtu.be/13PwAViGRXg         ](https://youtu.be/13PwAViGRXg))
->
-> [YouTube demo (timestamp)](https://youtu.be/13PwAViGRXg?t=296)
 
 ---
 
@@ -531,7 +533,7 @@ IV. Evaluation & Analysis
 ---
 
 Model Loss:
-![png](Resources/output_13_0.png)
+![png](Resources/images/output_13_0.png)
 
 
 
